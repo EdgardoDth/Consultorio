@@ -1,6 +1,5 @@
 <?php
 include_once 'app/Conexion.inc.php';
-include_once 'app/RepositorioUsuario.inc.php';
 $titulo = "Centro de Salud";
 include_once 'plantilla/documento_declaracion.inc.php';
 include_once 'plantilla/navbar.inc.php';
