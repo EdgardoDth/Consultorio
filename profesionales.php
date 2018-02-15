@@ -82,9 +82,9 @@ include_once 'plantilla/navbar.inc.php';
                                 extract($row);
                                 echo "<TR>"
                                         ."<TD>".$row['idMedico']."</TD>"
-                                        ."<TD>".$row['nombre']." ".$row['apellidoP']." ".$row['apellidoM']."</TD>"
-                                        ."<TD>".$row['nombre']."</TD>"
-                                        ."<TD>".$row['nombre']."</TD>"
+                                        ."<TD>".$row['nombreMed']." ".$row['apellidoPMed']." ".$row['apellidoMMed']."</TD>"
+                                        ."<TD>".$row['nombreCen']."</TD>"
+                                        ."<TD>".$row['nombreAre']."</TD>"
                                         ."</TR>";
                             }
                             ?>
