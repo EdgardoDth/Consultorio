@@ -16,8 +16,7 @@ if(isset($_POST['enviar'])) {
 
     if(isset($conexion)) {
             try {
-                $sql = "INSERT INTO medico(idMedico, nombre, apellidoP, apellidoM,
-                        fecha_ingreso, idCentro, idArea)
+                $sql = "INSERT INTO Medico
                         VALUES(:idPaciente, :nombre, :nombre2,:nombre3,
                              NOW(), :centro, :area)";
 
