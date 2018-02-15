@@ -26,3 +26,15 @@ VALUES (4, "Aviacion", "32984004", 4);
 
 INSERT INTO Centro
 VALUES (5, "Metropolis", "31312456", 5);
+
+INSERT INTO Area
+VALUES (1, "Pediatria");
+
+INSERT INTO Area
+VALUES (2, "Medico General");
+
+INSERT INTO Area
+VALUES (3, "Odontologia");
+
+INSERT INTO Area
+VALUES (4, "Maternidad");
