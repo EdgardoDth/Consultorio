@@ -27,3 +27,4 @@ class Conexion {
         return self::$conexion;
     }
 }
+?>
