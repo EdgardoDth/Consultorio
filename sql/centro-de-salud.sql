@@ -12,65 +12,65 @@ CREATE TABLE Direccion (
 
 CREATE TABLE Centro (
     idCentro INT NOT NULL AUTO_INCREMENT,
-    nombre VARCHAR(45) NOT NULL,
-    Telefono INT NOT NULL,
-    idDireccion INT NOT NULL,
+    nombreCen VARCHAR(45) NOT NULL,
+    TelefonoCen INT NOT NULL,
+    idDireccionCen INT NOT NULL,
     PRIMARY KEY(idCentro),
-    FOREIGN KEY(idDireccion) REFERENCES Direccion(idDireccion)
+    FOREIGN KEY(idDireccionCen) REFERENCES Direccion(idDireccion)
 );
 
 CREATE TABLE Area (
     idArea INT NOT NULL AUTO_INCREMENT,
-    nombre VARCHAR(45) NOT NULL,
+    nombreAre VARCHAR(45) NOT NULL,
     PRIMARY KEY(idArea)
 );
 
 CREATE TABLE Medico (
     idMedico INT NOT NULL AUTO_INCREMENT,
-    nombre VARCHAR(45) NOT NULL,
-    apellidoP VARCHAR(45) NOT NULL,
-    apellidoM VARCHAR(45) NOT NULL,
-    fecha_ingreso DATE NOT NULL,
-    idCentro INT NOT NULL,
-    idArea INT NOT NULL,
+    nombreMed VARCHAR(45) NOT NULL,
+    apellidoPMed VARCHAR(45) NOT NULL,
+    apellidoMMed VARCHAR(45) NOT NULL,
+    fecha_ingresoMed DATE NOT NULL,
+    idCentroMed INT NOT NULL,
+    idAreaMed INT NOT NULL,
     PRIMARY KEY(idMedico),
-    FOREIGN KEY(idCentro) REFERENCES Centro(idCentro),
-    FOREIGN KEY(idArea) REFERENCES Area(idArea)
+    FOREIGN KEY(idCentroMed) REFERENCES Centro(idCentro),
+    FOREIGN KEY(idAreaMed) REFERENCES Area(idArea)
 );
 
 CREATE TABLE Paciente (
     idPaciente INT NOT NULL AUTO_INCREMENT,
-    nombre VARCHAR(45) NOT NULL,
-    apellidoP VARCHAR(45) NOT NULL,
-    apellidoM VARCHAR(45) NOT NULL,
-    fecha_ingreso DATE NOT NULL,
-    fecha_nacimiento DATE NOT NULL,
-    telefono INT NOT NULL,
+    nombrePac VARCHAR(45) NOT NULL,
+    apellidoPPac VARCHAR(45) NOT NULL,
+    apellidoMPAc VARCHAR(45) NOT NULL,
+    fecha_ingresoPac DATE NOT NULL,
+    fecha_nacimientoPAc DATE NOT NULL,
+    telefonoPac INT NOT NULL,
     PRIMARY KEY(idPaciente)
 );
 
 CREATE TABLE Cita (
     idCita INT NOT NULL AUTO_INCREMENT,
-    idMedico INT NOT NULL,
-    fecha DATETIME NOT NULL,
-    costo FLOAT NOT NULL,
-    idPaciente INT NOT NULL,
+    idMedicoCit INT NOT NULL,
+    fechaCit DATETIME NOT NULL,
+    costoCit FLOAT NOT NULL,
+    idPacienteCit INT NOT NULL,
     PRIMARY KEY(idcita),
-    FOREIGN KEY(idMedico) REFERENCES Medico(idMedico),
-    FOREIGN KEY(idPaciente) REFERENCES Paciente(idPaciente)
+    FOREIGN KEY(idMedicoCit) REFERENCES Medico(idMedico),
+    FOREIGN KEY(idPacienteCit) REFERENCES Paciente(idPaciente)
 );
 
 CREATE TABLE Receta (
     idReceta INT NOT NULL,
-    idCita INT NOT NULL,
+    idCitaRec INT NOT NULL,
     PRIMARY KEY(idReceta),
-    FOREIGN KEY(idCita) REFERENCES Cita(idCita)
+    FOREIGN KEY(idCitaRec) REFERENCES Cita(idCita)
 );
 
 CREATE TABLE Medicamento (
     idMedicamento INT NOT NULL AUTO_INCREMENT,
-    nombre VARCHAR(45) NOT NULL,
-    idReceta INT NOT NULL,
+    nombreMedi VARCHAR(45) NOT NULL,
+    idRecetaMedi INT NOT NULL,
     PRIMARY KEY(idMedicamento),
-    FOREIGN KEY(idReceta) REFERENCES Receta(idReceta)
+    FOREIGN KEY(idRecetaMedi) REFERENCES Receta(idReceta)
 );
