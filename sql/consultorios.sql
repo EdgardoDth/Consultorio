@@ -38,3 +38,15 @@ VALUES (3, "Odontologia");
 
 INSERT INTO Area
 VALUES (4, "Maternidad");
+
+INSERT INTO Medico
+VALUES (1234, "Rodrigo", "Contreras", "Martinez", NOW(), 5, 1);
+
+INSERT INTO Medico
+VALUES (23456, "Ignacio", "Alonso", "Gutierrez", NOW(), 4, 3);
+
+INSERT INTO Medico
+VALUES (1324, "Irma", "Davalos", "Mendoza", NOW(), 3,4);
+
+INSERT INTO Medico
+VALUES (5426, "Alma", "Avila", "Sandoval", NOW(), 1, 2);
